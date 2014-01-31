@@ -24,6 +24,7 @@
 		BA9FC4C5189B22B7000CDE16 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4C4189B22B7000CDE16 /* SWRevealViewController.m */; };
 		BA9FC4C8189B23C1000CDE16 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4C7189B23C1000CDE16 /* HomeViewController.m */; };
 		BA9FC4CB189B23E4000CDE16 /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */; };
+		BA9FC4CE189B327A000CDE16 /* stardust.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9FC4CD189B327A000CDE16 /* stardust.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		BA9FC4C7189B23C1000CDE16 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		BA9FC4C9189B23E4000CDE16 /* PanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelViewController.h; sourceTree = "<group>"; };
 		BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelViewController.m; sourceTree = "<group>"; };
+		BA9FC4CD189B327A000CDE16 /* stardust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stardust.png; path = Images/panelView/stardust.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,12 +169,21 @@
 		BA9FC4C2189B2234000CDE16 /* Panel View */ = {
 			isa = PBXGroup;
 			children = (
+				BA9FC4CC189B326D000CDE16 /* Images */,
 				BA9FC4C9189B23E4000CDE16 /* PanelViewController.h */,
 				BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */,
 				BA9FC4C3189B22B7000CDE16 /* SWRevealViewController.h */,
 				BA9FC4C4189B22B7000CDE16 /* SWRevealViewController.m */,
 			);
 			name = "Panel View";
+			sourceTree = "<group>";
+		};
+		BA9FC4CC189B326D000CDE16 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BA9FC4CD189B327A000CDE16 /* stardust.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9FC4A6189B2228000CDE16 /* Images.xcassets in Resources */,
+				BA9FC4CE189B327A000CDE16 /* stardust.png in Resources */,
 				BA9FC498189B2228000CDE16 /* InfoPlist.strings in Resources */,
 				BA9FC4A1189B2228000CDE16 /* Main.storyboard in Resources */,
 			);
@@ -487,6 +499,7 @@
 				BA9FC4BE189B2228000CDE16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA9FC4BF189B2228000CDE16 /* Build configuration list for PBXNativeTarget "MizzouTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +508,7 @@
 				BA9FC4C1189B2228000CDE16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

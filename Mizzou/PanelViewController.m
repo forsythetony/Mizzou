@@ -11,6 +11,8 @@
 
 #define SECTIONHEADERHEIGHT 40.0
 #define LEFTPADDING 10.0
+#define PANELWIDTH 150.0
+#define CELLHEIGHT 40.0
 
 @interface PanelViewController ()
 
@@ -32,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initialConfiguration];
     [self revealViewControllerConfig];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -81,12 +84,28 @@
     
     [titleLabel setText:name];
     
+    UIFont *labelFont = [UIFont fontWithName:@"Papyrus" size:22.0];
+    [titleLabel setFont:labelFont];
     
     [cell.contentView addSubview:titleLabel];
     
-    [cell setBackgroundColor:[UIColor grayColor]];
+    [cell setBackgroundColor:[UIColor colorWithWhite:0.4 alpha:0.5]];
+    
+    //Create line seperator
+    
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(6.0, CELLHEIGHT - 1.0, PANELWIDTH - 40.0, 1.0)];
+    
+    [line setBackgroundColor:[UIColor whiteColor]];
+    
+    [cell.contentView addSubview:line];
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CELLHEIGHT;
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -109,30 +128,37 @@
 -(void)revealViewControllerConfig
 {
     [self.revealViewController setRearViewController:self];
-    [self.revealViewController setRearViewRevealWidth:100.0];
+    [self.revealViewController setRearViewRevealWidth:PANELWIDTH];
+    
+    [self.revealViewController setRearViewRevealOverdraw:0.0];
+    [self.revealViewController setRearViewRevealDisplacement:0.0];
+    [self.revealViewController setBounceBackOnOverdraw:NO];
+    
 }
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     //Intial configurations for layout and font
     
-    UIFont *titleFont = [UIFont fontWithName:@"Papyrus" size:14.0];
+    UIFont *titleFont = [UIFont fontWithName:@"Papyrus" size:25.0];
     
     UIColor *titleColor = [UIColor colorWithWhite:0.5 alpha:1.0];
     UIColor *backgroundColor = [UIColor colorWithWhite:0.0 alpha:1.0];
     
     CGRect headerRect;
     
-    headerRect.origin.x = 0.0 + LEFTPADDING;
+    headerRect.origin.x = 0.0;
     headerRect.origin.y = 0.0;
-    headerRect.size.width = self.view.bounds.size.width;
+    headerRect.size.width = PANELWIDTH;
     headerRect.size.height = SECTIONHEADERHEIGHT;
     
     UIView *headerView = [[UIView alloc] initWithFrame:headerRect];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0 + LEFTPADDING, 0.0, 200.0, SECTIONHEADERHEIGHT)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 5.0, PANELWIDTH, SECTIONHEADERHEIGHT)];
     [titleLabel setFont:titleFont];
     [titleLabel setText:@"Menu"];
     [titleLabel setTextColor:titleColor];
+    [titleLabel setBackgroundColor:[UIColor clearColor]];
+    [titleLabel setTextAlignment:NSTextAlignmentCenter];
     
     [headerView addSubview:titleLabel];
     [headerView setBackgroundColor:backgroundColor];
@@ -143,57 +169,11 @@
 {
     return SECTIONHEADERHEIGHT;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)initialConfiguration
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [self.tableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"stardust.png"]]];
+    
 }
 
- */
 
 @end

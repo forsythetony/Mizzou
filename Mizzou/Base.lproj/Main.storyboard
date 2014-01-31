@@ -64,7 +64,7 @@
         <scene sceneID="74f-99-N9W">
             <objects>
                 <tableViewController id="J5U-w4-Vww" customClass="PanelViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="weP-Ol-XwK">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="weP-Ol-XwK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,51 +73,51 @@
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5CT-fh-SsA" id="Rik-7C-y30">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Z3d-Xx-4Fh" kind="custom" customClass="SWRevealViewControllerSegue" trigger="accessoryAction" id="izU-VR-Sgq"/>
+                                    <segue destination="Z3d-Xx-4Fh" kind="custom" customClass="SWRevealViewControllerSegue" id="GpS-eX-VVm"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Events" id="1DV-aY-cgF">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1DV-aY-cgF" id="H9a-Sy-1nJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="67o-Sr-5e8" kind="custom" customClass="SWRevealViewControllerSegue" trigger="accessoryAction" id="rph-m6-gC4"/>
+                                    <segue destination="67o-Sr-5e8" kind="custom" customClass="SWRevealViewControllerSegue" id="pqc-dG-nd5"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Dining" id="ses-D5-TAJ">
                                 <rect key="frame" x="0.0" y="110" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ses-D5-TAJ" id="soH-jC-3pV">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="cX3-nA-jV4" kind="custom" customClass="SWRevealViewControllerSegue" trigger="accessoryAction" id="cF1-Zb-F8C"/>
+                                    <segue destination="cX3-nA-jV4" kind="custom" customClass="SWRevealViewControllerSegue" id="NMh-BB-hxM"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyZou" id="xNE-6y-pe7">
                                 <rect key="frame" x="0.0" y="154" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xNE-6y-pe7" id="Ehc-sv-ysz">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="n4Y-gF-IPX" kind="custom" customClass="SWRevealViewControllerSegue" trigger="accessoryAction" id="DxQ-vW-gFc"/>
+                                    <segue destination="n4Y-gF-IPX" kind="custom" customClass="SWRevealViewControllerSegue" id="jx8-5i-gVl"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Settings" id="KHm-oZ-sdB">
                                 <rect key="frame" x="0.0" y="198" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KHm-oZ-sdB" id="Efb-7C-x7X">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -278,10 +278,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="izU-VR-Sgq"/>
-        <segue reference="DxQ-vW-gFc"/>
+        <segue reference="GpS-eX-VVm"/>
         <segue reference="Srm-gr-jkb"/>
-        <segue reference="rph-m6-gC4"/>
-        <segue reference="cF1-Zb-F8C"/>
+        <segue reference="NMh-BB-hxM"/>
+        <segue reference="pqc-dG-nd5"/>
+        <segue reference="jx8-5i-gVl"/>
     </inferredMetricsTieBreakers>
 </document>
