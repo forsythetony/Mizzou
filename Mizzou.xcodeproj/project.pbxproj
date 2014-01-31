@@ -21,6 +21,9 @@
 		BA9FC4AF189B2228000CDE16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9FC491189B2228000CDE16 /* UIKit.framework */; };
 		BA9FC4B7189B2228000CDE16 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA9FC4B5189B2228000CDE16 /* InfoPlist.strings */; };
 		BA9FC4B9189B2228000CDE16 /* MizzouTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4B8189B2228000CDE16 /* MizzouTests.m */; };
+		BA9FC4C5189B22B7000CDE16 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4C4189B22B7000CDE16 /* SWRevealViewController.m */; };
+		BA9FC4C8189B23C1000CDE16 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4C7189B23C1000CDE16 /* HomeViewController.m */; };
+		BA9FC4CB189B23E4000CDE16 /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		BA9FC4B4189B2228000CDE16 /* MizzouTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MizzouTests-Info.plist"; sourceTree = "<group>"; };
 		BA9FC4B6189B2228000CDE16 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BA9FC4B8189B2228000CDE16 /* MizzouTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MizzouTests.m; sourceTree = "<group>"; };
+		BA9FC4C3189B22B7000CDE16 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		BA9FC4C4189B22B7000CDE16 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		BA9FC4C6189B23C1000CDE16 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		BA9FC4C7189B23C1000CDE16 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		BA9FC4C9189B23E4000CDE16 /* PanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelViewController.h; sourceTree = "<group>"; };
+		BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +121,9 @@
 		BA9FC493189B2228000CDE16 /* Mizzou */ = {
 			isa = PBXGroup;
 			children = (
+				BA9FC4C6189B23C1000CDE16 /* HomeViewController.h */,
+				BA9FC4C7189B23C1000CDE16 /* HomeViewController.m */,
+				BA9FC4C2189B2234000CDE16 /* Panel View */,
 				BA9FC49C189B2228000CDE16 /* ARFAppDelegate.h */,
 				BA9FC49D189B2228000CDE16 /* ARFAppDelegate.m */,
 				BA9FC49F189B2228000CDE16 /* Main.storyboard */,
@@ -119,6 +131,8 @@
 				BA9FC4A3189B2228000CDE16 /* ARFViewController.m */,
 				BA9FC4A5189B2228000CDE16 /* Images.xcassets */,
 				BA9FC494189B2228000CDE16 /* Supporting Files */,
+				BA9FC4C9189B23E4000CDE16 /* PanelViewController.h */,
+				BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */,
 			);
 			path = Mizzou;
 			sourceTree = "<group>";
@@ -150,6 +164,15 @@
 				BA9FC4B5189B2228000CDE16 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA9FC4C2189B2234000CDE16 /* Panel View */ = {
+			isa = PBXGroup;
+			children = (
+				BA9FC4C3189B22B7000CDE16 /* SWRevealViewController.h */,
+				BA9FC4C4189B22B7000CDE16 /* SWRevealViewController.m */,
+			);
+			name = "Panel View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,8 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA9FC49E189B2228000CDE16 /* ARFAppDelegate.m in Sources */,
+				BA9FC4CB189B23E4000CDE16 /* PanelViewController.m in Sources */,
 				BA9FC4A4189B2228000CDE16 /* ARFViewController.m in Sources */,
 				BA9FC49A189B2228000CDE16 /* main.m in Sources */,
+				BA9FC4C8189B23C1000CDE16 /* HomeViewController.m in Sources */,
+				BA9FC4C5189B22B7000CDE16 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
