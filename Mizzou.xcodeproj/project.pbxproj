@@ -14,7 +14,6 @@
 		BA9FC49A189B2228000CDE16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC499189B2228000CDE16 /* main.m */; };
 		BA9FC49E189B2228000CDE16 /* ARFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC49D189B2228000CDE16 /* ARFAppDelegate.m */; };
 		BA9FC4A1189B2228000CDE16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA9FC49F189B2228000CDE16 /* Main.storyboard */; };
-		BA9FC4A4189B2228000CDE16 /* ARFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4A3189B2228000CDE16 /* ARFViewController.m */; };
 		BA9FC4A6189B2228000CDE16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA9FC4A5189B2228000CDE16 /* Images.xcassets */; };
 		BA9FC4AD189B2228000CDE16 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9FC4AC189B2228000CDE16 /* XCTest.framework */; };
 		BA9FC4AE189B2228000CDE16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9FC48D189B2228000CDE16 /* Foundation.framework */; };
@@ -49,8 +48,6 @@
 		BA9FC49C189B2228000CDE16 /* ARFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARFAppDelegate.h; sourceTree = "<group>"; };
 		BA9FC49D189B2228000CDE16 /* ARFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARFAppDelegate.m; sourceTree = "<group>"; };
 		BA9FC4A0189B2228000CDE16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BA9FC4A2189B2228000CDE16 /* ARFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARFViewController.h; sourceTree = "<group>"; };
-		BA9FC4A3189B2228000CDE16 /* ARFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARFViewController.m; sourceTree = "<group>"; };
 		BA9FC4A5189B2228000CDE16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BA9FC4AB189B2228000CDE16 /* MizzouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MizzouTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9FC4AC189B2228000CDE16 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -90,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49E81BF5189B6E0000E909C4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BA9FC4C6189B23C1000CDE16 /* HomeViewController.h */,
+				BA9FC4C7189B23C1000CDE16 /* HomeViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		BA9FC481189B2228000CDE16 = {
 			isa = PBXGroup;
 			children = (
@@ -123,14 +129,11 @@
 		BA9FC493189B2228000CDE16 /* Mizzou */ = {
 			isa = PBXGroup;
 			children = (
-				BA9FC4C6189B23C1000CDE16 /* HomeViewController.h */,
-				BA9FC4C7189B23C1000CDE16 /* HomeViewController.m */,
-				BA9FC4C2189B2234000CDE16 /* Panel View */,
 				BA9FC49C189B2228000CDE16 /* ARFAppDelegate.h */,
 				BA9FC49D189B2228000CDE16 /* ARFAppDelegate.m */,
 				BA9FC49F189B2228000CDE16 /* Main.storyboard */,
-				BA9FC4A2189B2228000CDE16 /* ARFViewController.h */,
-				BA9FC4A3189B2228000CDE16 /* ARFViewController.m */,
+				49E81BF5189B6E0000E909C4 /* Home */,
+				BA9FC4C2189B2234000CDE16 /* Panel View */,
 				BA9FC4A5189B2228000CDE16 /* Images.xcassets */,
 				BA9FC494189B2228000CDE16 /* Supporting Files */,
 			);
@@ -287,7 +290,6 @@
 			files = (
 				BA9FC49E189B2228000CDE16 /* ARFAppDelegate.m in Sources */,
 				BA9FC4CB189B23E4000CDE16 /* PanelViewController.m in Sources */,
-				BA9FC4A4189B2228000CDE16 /* ARFViewController.m in Sources */,
 				BA9FC49A189B2228000CDE16 /* main.m in Sources */,
 				BA9FC4C8189B23C1000CDE16 /* HomeViewController.m in Sources */,
 				BA9FC4C5189B22B7000CDE16 /* SWRevealViewController.m in Sources */,
