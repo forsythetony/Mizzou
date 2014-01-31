@@ -40,7 +40,7 @@
 {
     self.title = @"Home";
 
-    [self.view setBackgroundColor:[UIColor colorWithRed:222.0/255.0 green:179.0/255.0 blue:5.0/255.0 alpha:1.0]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"gray_jean_@2X.jpg"]]];
     [self slidingPanelSetup];
 }
 -(void)slidingPanelSetup

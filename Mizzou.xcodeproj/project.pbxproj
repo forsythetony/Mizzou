@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49E81BF8189B6F1200E909C4 /* mizzou_columns.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49E81BF7189B6F1200E909C4 /* mizzou_columns.jpg */; };
+		49E81BFE189B700500E909C4 /* gray_jean_@2X.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49E81BFD189B700500E909C4 /* gray_jean_@2X.jpg */; };
 		BA9FC48E189B2228000CDE16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9FC48D189B2228000CDE16 /* Foundation.framework */; };
 		BA9FC490189B2228000CDE16 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9FC48F189B2228000CDE16 /* CoreGraphics.framework */; };
 		BA9FC492189B2228000CDE16 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA9FC491189B2228000CDE16 /* UIKit.framework */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49E81BF7189B6F1200E909C4 /* mizzou_columns.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mizzou_columns.jpg; path = Images/homeView/mizzou_columns.jpg; sourceTree = "<group>"; };
+		49E81BFD189B700500E909C4 /* gray_jean_@2X.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "gray_jean_@2X.jpg"; path = "Images/homeView/gray_jean_@2X.jpg"; sourceTree = "<group>"; };
 		BA9FC48A189B2228000CDE16 /* Mizzou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mizzou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9FC48D189B2228000CDE16 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BA9FC48F189B2228000CDE16 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,10 +94,20 @@
 		49E81BF5189B6E0000E909C4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				49E81BF6189B6EF200E909C4 /* Images */,
 				BA9FC4C6189B23C1000CDE16 /* HomeViewController.h */,
 				BA9FC4C7189B23C1000CDE16 /* HomeViewController.m */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		49E81BF6189B6EF200E909C4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				49E81BFD189B700500E909C4 /* gray_jean_@2X.jpg */,
+				49E81BF7189B6F1200E909C4 /* mizzou_columns.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		BA9FC481189B2228000CDE16 = {
@@ -270,6 +284,8 @@
 				BA9FC4CE189B327A000CDE16 /* stardust.png in Resources */,
 				BA9FC498189B2228000CDE16 /* InfoPlist.strings in Resources */,
 				BA9FC4A1189B2228000CDE16 /* Main.storyboard in Resources */,
+				49E81BF8189B6F1200E909C4 /* mizzou_columns.jpg in Resources */,
+				49E81BFE189B700500E909C4 /* gray_jean_@2X.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
