@@ -10,4 +10,6 @@
 
 @interface HomeViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *primaryLabel;
+
 @end

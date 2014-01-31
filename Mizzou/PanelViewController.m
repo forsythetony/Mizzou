@@ -14,6 +14,8 @@
 #define PANELWIDTH 150.0
 #define CELLHEIGHT 40.0
 
+#define FONTTOUSE @"Thonburi"
+
 @interface PanelViewController ()
 
 @property (nonatomic, strong) NSArray *menuItems;
@@ -84,7 +86,7 @@
     
     [titleLabel setText:name];
     
-    UIFont *labelFont = [UIFont fontWithName:@"Papyrus" size:22.0];
+    UIFont *labelFont = [UIFont fontWithName:FONTTOUSE size:22.0];
     [titleLabel setFont:labelFont];
     
     [cell.contentView addSubview:titleLabel];
@@ -139,7 +141,7 @@
 {
     //Intial configurations for layout and font
     
-    UIFont *titleFont = [UIFont fontWithName:@"Papyrus" size:25.0];
+    UIFont *titleFont = [UIFont fontWithName:FONTTOUSE size:25.0];
     
     UIColor *titleColor = [UIColor colorWithWhite:0.5 alpha:1.0];
     UIColor *backgroundColor = [UIColor colorWithWhite:0.0 alpha:1.0];
