@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "SWRevealViewController.h"
 
 @interface HomeViewController ()
 
@@ -26,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initialConfiguration];
 	// Do any additional setup after loading the view.
 }
 
@@ -33,6 +35,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)initialConfiguration
+{
+    self.title = @"Home";
+    [self.view setBackgroundColor:[UIColor redColor]];
+    [self slidingPanelSetup];
+}
+-(void)slidingPanelSetup
+{
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 @end

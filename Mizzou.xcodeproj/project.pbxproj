@@ -131,8 +131,6 @@
 				BA9FC4A3189B2228000CDE16 /* ARFViewController.m */,
 				BA9FC4A5189B2228000CDE16 /* Images.xcassets */,
 				BA9FC494189B2228000CDE16 /* Supporting Files */,
-				BA9FC4C9189B23E4000CDE16 /* PanelViewController.h */,
-				BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */,
 			);
 			path = Mizzou;
 			sourceTree = "<group>";
@@ -169,6 +167,8 @@
 		BA9FC4C2189B2234000CDE16 /* Panel View */ = {
 			isa = PBXGroup;
 			children = (
+				BA9FC4C9189B23E4000CDE16 /* PanelViewController.h */,
+				BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */,
 				BA9FC4C3189B22B7000CDE16 /* SWRevealViewController.h */,
 				BA9FC4C4189B22B7000CDE16 /* SWRevealViewController.m */,
 			);

@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="774" y="39"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="ofc-s0-zAe">
             <objects>
-                <viewController id="Z3d-Xx-4Fh" sceneMemberID="viewController">
+                <viewController id="Z3d-Xx-4Fh" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6TI-s9-TDI"/>
                         <viewControllerLayoutGuide type="bottom" id="HB5-BB-XvQ"/>
@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="1407" y="39"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Panel View Controller-->
         <scene sceneID="74f-99-N9W">
             <objects>
-                <tableViewController id="J5U-w4-Vww" sceneMemberID="viewController">
+                <tableViewController id="J5U-w4-Vww" customClass="PanelViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="weP-Ol-XwK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -278,10 +278,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Srm-gr-jkb"/>
-        <segue reference="cF1-Zb-F8C"/>
-        <segue reference="DxQ-vW-gFc"/>
         <segue reference="izU-VR-Sgq"/>
+        <segue reference="DxQ-vW-gFc"/>
+        <segue reference="Srm-gr-jkb"/>
         <segue reference="rph-m6-gC4"/>
+        <segue reference="cF1-Zb-F8C"/>
     </inferredMetricsTieBreakers>
 </document>
