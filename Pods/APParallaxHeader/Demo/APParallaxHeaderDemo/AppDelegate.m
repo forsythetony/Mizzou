@@ -1,22 +1,18 @@
 //
-//  ARFAppDelegate.m
-//  Mizzou
+//  AppDelegate.m
+//  APParallaxHeaderDemo
 //
-//  Created by Anthony Forsythe on 1/30/14.
-//  Copyright (c) 2014 ARF. All rights reserved.
+//  Created by Mathias Amnell on 2013-04-12.
+//  Copyright (c) 2013 Apping AB. All rights reserved.
 //
 
-#import "ARFAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation ARFAppDelegate
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    self.colorScheme = [[UIColor strawberryColor] colorSchemeOfType:ColorSchemeAnalagous];
-    [self configureNavigationBar];
-    
-    
     return YES;
 }
 							
@@ -45,15 +41,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
--(void)configureNavigationBar
-{
-    
-    
-    
-    [[UINavigationBar appearance] setBarTintColor:[UIColor charcoalColor]];
-    
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, [UIFont fontWithName:@"Avenir-Book" size:26.0], NSFontAttributeName, nil]];
 }
 
 @end

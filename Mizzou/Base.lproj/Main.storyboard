@@ -117,7 +117,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="cX3-nA-jV4" kind="custom" customClass="SWRevealViewControllerSegue" id="NMh-BB-hxM"/>
+                                    <segue destination="8lP-LQ-uDB" kind="custom" customClass="SWRevealViewControllerSegue" id="BDz-3N-6Uz"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyZou" id="xNE-6y-pe7">
@@ -187,6 +187,40 @@
             </objects>
             <point key="canvasLocation" x="1407" y="782"/>
         </scene>
+        <!--Dining Halls Table View View Controller - Tony's Dining-->
+        <scene sceneID="jv7-bP-8zA">
+            <objects>
+                <tableViewController id="8lP-LQ-uDB" customClass="ARFDiningHallsTableViewViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="h4N-uy-Qaf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="0ZG-rT-Zjv">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0ZG-rT-Zjv" id="7Jj-bu-q4Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8lP-LQ-uDB" id="Wf5-27-HZV"/>
+                            <outlet property="delegate" destination="8lP-LQ-uDB" id="bYi-Ph-W8h"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tony's Dining" id="glv-ax-9Aw">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="4LM-is-nme"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="paneViewButton" destination="4LM-is-nme" id="yln-Yj-oZr"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6hs-sR-Uxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1393" y="1548"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="J2e-6r-hwb">
             <objects>
@@ -195,7 +229,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="cX3-nA-jV4" kind="relationship" relationship="rootViewController" id="CAq-J5-L2Y"/>
+                        <segue destination="8lP-LQ-uDB" kind="relationship" relationship="rootViewController" id="6Vq-Qd-Rle"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDX-Po-DyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -270,25 +304,6 @@
             </objects>
             <point key="canvasLocation" x="1407" y="2396"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="5cT-Bc-Xlq">
-            <objects>
-                <viewController id="cX3-nA-jV4" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iXI-go-2RI"/>
-                        <viewControllerLayoutGuide type="bottom" id="fdD-Ne-pMA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BfR-OG-Jgh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="brc-2T-PJK"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0fB-WD-9Se" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1407" y="1548"/>
-        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -296,10 +311,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GpS-eX-VVm"/>
-        <segue reference="Srm-gr-jkb"/>
-        <segue reference="NMh-BB-hxM"/>
         <segue reference="pqc-dG-nd5"/>
+        <segue reference="Srm-gr-jkb"/>
         <segue reference="jx8-5i-gVl"/>
+        <segue reference="GpS-eX-VVm"/>
+        <segue reference="6Vq-Qd-Rle"/>
     </inferredMetricsTieBreakers>
 </document>

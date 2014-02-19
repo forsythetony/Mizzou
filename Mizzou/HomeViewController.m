@@ -29,8 +29,15 @@
     [super viewDidLoad];
     [self initialConfiguration];
 	// Do any additional setup after loading the view.
-}
+    
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+    
 
+}
+-(UIStatusBarStyle) preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -40,7 +47,7 @@
 {
     self.title = @"Home";
 
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"gray_jean_@2X.jpg"]]];
+    [self.view setBackgroundColor:[UIColor antiqueWhiteColor]];
     [self slidingPanelSetup];
 }
 -(void)slidingPanelSetup

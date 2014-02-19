@@ -8,13 +8,14 @@
 
 #import "PanelViewController.h"
 #import "SWRevealViewController.h"
+#import "Colours.h"
 
 #define SECTIONHEADERHEIGHT 40.0
 #define LEFTPADDING 10.0
 #define PANELWIDTH 150.0
 #define CELLHEIGHT 40.0
 
-#define FONTTOUSE @"Thonburi"
+#define FONTTOUSE @"ChalkboardSE-Regular"
 
 @interface PanelViewController ()
 
@@ -46,6 +47,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     _menuItems = @[@"Home", @"Events", @"Dining", @"MyZou", @"Settings"];
+    
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
     
 }
 
@@ -173,7 +176,11 @@
 }
 -(void)initialConfiguration
 {
-    [self.tableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"stardust.png"]]];
+
+    
+    NSArray *colorsArray = [[UIColor strawberryColor] colorSchemeOfType:ColorSchemeAnalagous];
+    
+    [self.tableView.backgroundView setTintColor:[UIColor charcoalColor]];
     
 }
 
