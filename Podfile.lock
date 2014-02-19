@@ -16,15 +16,22 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.1.4):
     - FontAwesomeKit/Core
+  - PNChart (0.2.2)
 
 DEPENDENCIES:
   - APParallaxHeader
   - Colours
   - FontAwesomeKit (~> 2.1.0)
+  - PNChart (from `https://github.com/forsythetony/PNChart.git`)
+
+EXTERNAL SOURCES:
+  PNChart:
+    :git: https://github.com/forsythetony/PNChart.git
 
 SPEC CHECKSUMS:
   APParallaxHeader: 860acb07f0339095b72d67a3947b5747d597dd16
   Colours: f36a89a9a77d14eac5e739786b0fbd41a5af1728
   FontAwesomeKit: 082a427b37f26cd535b7f295cb686f8ab0da707e
+  PNChart: 55161d5bf01a4a8e5593e5c45b34af70eae7ed83
 
 COCOAPODS: 0.29.0

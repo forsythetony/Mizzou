@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-PNChart.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>12C3AA9E83B04CA998999C3C</key>
+		<key>09A9EACC115A4A1D9E7C06BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6FADF141451841AAB16AF7D2</key>
+		<key>29BE289929A846018A3426E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>927F20464DD04A66A76F6857</key>
+		<key>5990C13E122742F5AD8B8A26</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D3575089D3DC410EA272BA76</key>
+		<key>5D52A25DD6C645D0A0025CD2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8D3B5FC716FE4825B5A96DAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

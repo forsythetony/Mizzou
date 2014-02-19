@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "SWRevealViewController.h"
+#import <FontAwesomeKit.h>
+#import <APParallaxHeader/UIScrollView+APParallaxHeader.h>
+#import <PNChart.h>
+#import <Colours/Colours.h>
+#import <PNChart/UICountingLabel.h>
 
 @interface ARFDiningHallsTableViewViewController : UITableViewController
 

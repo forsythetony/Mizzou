@@ -125,7 +125,7 @@
             
             UINavigationController* navController = (UINavigationController*)self.revealViewController.frontViewController;
             [navController setViewControllers: @[dvc] animated: NO ];
-            [self.revealViewController setFrontViewPosition: FrontViewPositionRightMost animated: NO];
+            [self.revealViewController setFrontViewPosition: FrontViewPositionLeft animated: YES];
         };
         
     }
@@ -138,6 +138,12 @@
     [self.revealViewController setRearViewRevealOverdraw:0.0];
     [self.revealViewController setRearViewRevealDisplacement:0.0];
     [self.revealViewController setBounceBackOnOverdraw:NO];
+    
+    
+    
+    
+    
+    
     
 }
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

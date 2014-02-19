@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FontAwesomeKit/FontAwesomeKit.h>
 
 @interface PanelViewController : UITableViewController
 

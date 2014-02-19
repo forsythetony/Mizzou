@@ -27,6 +27,10 @@
 		BA9FC4CB189B23E4000CDE16 /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */; };
 		BA9FC4CE189B327A000CDE16 /* stardust.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9FC4CD189B327A000CDE16 /* stardust.png */; };
 		BAAEF55218B54E35006F5785 /* ARFDiningHallsTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAEF55118B54E35006F5785 /* ARFDiningHallsTableViewViewController.m */; };
+		BAAEF55618B55938006F5785 /* foodHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55518B55938006F5785 /* foodHeader.png */; };
+		BAAEF55818B56390006F5785 /* squaredMetal.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55718B56390006F5785 /* squaredMetal.png */; };
+		BAAEF55D18B5781C006F5785 /* graphy.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55B18B5781C006F5785 /* graphy.png */; };
+		BAAEF55E18B5781C006F5785 /* graphy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55C18B5781C006F5785 /* graphy@2x.png */; };
 		E4F16F71E0D34A68A9C8F48A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF918B0C3FFC4F87B22E0F7C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +74,10 @@
 		BA9FC4CD189B327A000CDE16 /* stardust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stardust.png; path = Images/panelView/stardust.png; sourceTree = "<group>"; };
 		BAAEF55018B54E35006F5785 /* ARFDiningHallsTableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFDiningHallsTableViewViewController.h; sourceTree = "<group>"; };
 		BAAEF55118B54E35006F5785 /* ARFDiningHallsTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFDiningHallsTableViewViewController.m; sourceTree = "<group>"; };
+		BAAEF55518B55938006F5785 /* foodHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foodHeader.png; path = Images/foodHeader.png; sourceTree = "<group>"; };
+		BAAEF55718B56390006F5785 /* squaredMetal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = squaredMetal.png; path = Images/squaredMetal.png; sourceTree = "<group>"; };
+		BAAEF55B18B5781C006F5785 /* graphy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = graphy.png; path = Images/graphy.png; sourceTree = "<group>"; };
+		BAAEF55C18B5781C006F5785 /* graphy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graphy@2x.png"; path = "Images/graphy@2x.png"; sourceTree = "<group>"; };
 		FF918B0C3FFC4F87B22E0F7C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,11 +160,10 @@
 		BA9FC493189B2228000CDE16 /* Mizzou */ = {
 			isa = PBXGroup;
 			children = (
+				BAAEF55318B55921006F5785 /* DiningHalls */,
 				BA9FC49C189B2228000CDE16 /* ARFAppDelegate.h */,
 				BA9FC49D189B2228000CDE16 /* ARFAppDelegate.m */,
 				BA9FC49F189B2228000CDE16 /* Main.storyboard */,
-				BAAEF55018B54E35006F5785 /* ARFDiningHallsTableViewViewController.h */,
-				BAAEF55118B54E35006F5785 /* ARFDiningHallsTableViewViewController.m */,
 				49E81BF5189B6E0000E909C4 /* Home */,
 				BA9FC4C2189B2234000CDE16 /* Panel View */,
 				BA9FC4A5189B2228000CDE16 /* Images.xcassets */,
@@ -210,6 +217,27 @@
 			isa = PBXGroup;
 			children = (
 				BA9FC4CD189B327A000CDE16 /* stardust.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		BAAEF55318B55921006F5785 /* DiningHalls */ = {
+			isa = PBXGroup;
+			children = (
+				BAAEF55418B5592F006F5785 /* Images */,
+				BAAEF55018B54E35006F5785 /* ARFDiningHallsTableViewViewController.h */,
+				BAAEF55118B54E35006F5785 /* ARFDiningHallsTableViewViewController.m */,
+			);
+			name = DiningHalls;
+			sourceTree = "<group>";
+		};
+		BAAEF55418B5592F006F5785 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				BAAEF55B18B5781C006F5785 /* graphy.png */,
+				BAAEF55C18B5781C006F5785 /* graphy@2x.png */,
+				BAAEF55718B56390006F5785 /* squaredMetal.png */,
+				BAAEF55518B55938006F5785 /* foodHeader.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -296,8 +324,12 @@
 				BA9FC4A6189B2228000CDE16 /* Images.xcassets in Resources */,
 				BA9FC4CE189B327A000CDE16 /* stardust.png in Resources */,
 				BA9FC498189B2228000CDE16 /* InfoPlist.strings in Resources */,
+				BAAEF55818B56390006F5785 /* squaredMetal.png in Resources */,
 				BA9FC4A1189B2228000CDE16 /* Main.storyboard in Resources */,
 				49E81BF8189B6F1200E909C4 /* mizzou_columns.jpg in Resources */,
+				BAAEF55618B55938006F5785 /* foodHeader.png in Resources */,
+				BAAEF55E18B5781C006F5785 /* graphy@2x.png in Resources */,
+				BAAEF55D18B5781C006F5785 /* graphy.png in Resources */,
 				49E81BFE189B700500E909C4 /* gray_jean_@2X.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
