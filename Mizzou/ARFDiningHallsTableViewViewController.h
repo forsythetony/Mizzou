@@ -14,6 +14,7 @@
 #import <Colours/Colours.h>
 #import <PNChart/UICountingLabel.h>
 #import <CRToast/CRToast.h>
+#import <FPBrandColors/UIColor+FPBrandColor.h>
 
 @interface ARFDiningHallsTableViewViewController : UITableViewController
 

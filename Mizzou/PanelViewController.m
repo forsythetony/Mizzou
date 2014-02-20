@@ -137,13 +137,7 @@
     
     [self.revealViewController setRearViewRevealOverdraw:0.0];
     [self.revealViewController setRearViewRevealDisplacement:0.0];
-    [self.revealViewController setBounceBackOnOverdraw:NO];
-    
-    
-    
-    
-    
-    
+    [self.revealViewController setBounceBackOnOverdraw:NO];   
     
 }
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

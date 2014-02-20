@@ -24,6 +24,12 @@
 #define COCOAPODS_VERSION_MINOR_Colours 2
 #define COCOAPODS_VERSION_PATCH_Colours 0
 
+// FPBrandColors
+#define COCOAPODS_POD_AVAILABLE_FPBrandColors
+#define COCOAPODS_VERSION_MAJOR_FPBrandColors 0
+#define COCOAPODS_VERSION_MINOR_FPBrandColors 1
+#define COCOAPODS_VERSION_PATCH_FPBrandColors 3
+
 // FontAwesomeKit
 #define COCOAPODS_POD_AVAILABLE_FontAwesomeKit
 #define COCOAPODS_VERSION_MAJOR_FontAwesomeKit 2

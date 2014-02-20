@@ -41,6 +41,10 @@
     [self.tableView setDelegate:self];
     
     
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[self createCardView] style:UIBarButtonItemStylePlain target:nil action:nil];
+    [rightItem setTintColor:[UIColor dangerColor]];
+    [self.navigationItem setRightBarButtonItem:rightItem];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -180,7 +184,15 @@
                                                     [NSNumber numberWithFloat:50.0],
                                                     [NSNumber numberWithFloat:60.0],
                                                     [NSNumber numberWithFloat:64.0],
-                                                    [NSNumber numberWithFloat:72.0], nil];
+                                                    [NSNumber numberWithFloat:60.0], nil];
+    NSArray *trafficFuture = [NSArray arrayWithObjects:
+                        [NSNumber numberWithFloat:60.0],
+                        [NSNumber numberWithFloat:60.0],
+                        [NSNumber numberWithFloat:40.0],
+                        [NSNumber numberWithFloat:70.0],
+                        [NSNumber numberWithFloat:20.0],
+                        [NSNumber numberWithFloat:22.0],
+                        [NSNumber numberWithFloat:60.0], nil];
     
     NSArray *trafficBaja = [NSArray arrayWithObjects:
                         [NSNumber numberWithFloat:56.0],
@@ -190,6 +202,15 @@
                         [NSNumber numberWithFloat:20.0],
                         [NSNumber numberWithFloat:10.0],
                         [NSNumber numberWithFloat:5.0], nil];
+    
+    NSArray *trafficBajaFuture = [NSArray arrayWithObjects:
+                            [NSNumber numberWithFloat:5.0],
+                            [NSNumber numberWithFloat:12.0],
+                            [NSNumber numberWithFloat:35.0],
+                            [NSNumber numberWithFloat:44.0],
+                            [NSNumber numberWithFloat:20.0],
+                            [NSNumber numberWithFloat:40.0],
+                            [NSNumber numberWithFloat:13.0], nil];
 
     NSArray *trafficDobbs = [NSArray arrayWithObjects:
                             [NSNumber numberWithFloat:58.0],
@@ -200,6 +221,15 @@
                             [NSNumber numberWithFloat:0.0],
                             [NSNumber numberWithFloat:0.0], nil];
     
+    NSArray *trafficDobbsFuture = [NSArray arrayWithObjects:
+                             [NSNumber numberWithFloat:0.0],
+                             [NSNumber numberWithFloat:0.0],
+                             [NSNumber numberWithFloat:0],
+                             [NSNumber numberWithFloat:0],
+                             [NSNumber numberWithFloat:0],
+                             [NSNumber numberWithFloat:0],
+                             [NSNumber numberWithFloat:0], nil];
+    
     NSArray *trafficRollins = [NSArray arrayWithObjects:
                              [NSNumber numberWithFloat:10.0],
                              [NSNumber numberWithFloat:20.0],
@@ -209,10 +239,37 @@
                              [NSNumber numberWithFloat:38.0],
                              [NSNumber numberWithFloat:34.0], nil];
     
+    NSArray *trafficRollinsFuture = [NSArray arrayWithObjects:
+                               [NSNumber numberWithFloat:34.0],
+                               [NSNumber numberWithFloat:44.0],
+                               [NSNumber numberWithFloat:50.0],
+                               [NSNumber numberWithFloat:30.0],
+                               [NSNumber numberWithFloat:50.0],
+                               [NSNumber numberWithFloat:44.0],
+                               [NSNumber numberWithFloat:30.0], nil];
     
-    NSArray *keys = [NSArray arrayWithObjects:@"name", @"hours", @"location", @"menu", @"traffic", @"walking", @"isOpen", nil];
+    NSArray *trafficMark = [NSArray arrayWithObjects:
+                               [NSNumber numberWithFloat:10.0],
+                               [NSNumber numberWithFloat:30.0],
+                               [NSNumber numberWithFloat:50.0],
+                               [NSNumber numberWithFloat:23.0],
+                               [NSNumber numberWithFloat:20.0],
+                               [NSNumber numberWithFloat:34.0],
+                               [NSNumber numberWithFloat:52.0], nil];
     
-    NSArray *baja = [NSArray arrayWithObjects:@"Baja Grill", @"8:00am - 11:00pm", @"Bingham Commons", @"theMenu", trafficBaja, @"14min", [NSNumber numberWithBool:YES], nil];
+    NSArray *trafficMarkFuture = [NSArray arrayWithObjects:
+                            [NSNumber numberWithFloat:52.0],
+                            [NSNumber numberWithFloat:40.0],
+                            [NSNumber numberWithFloat:30.0],
+                            [NSNumber numberWithFloat:27.0],
+                            [NSNumber numberWithFloat:15.0],
+                            [NSNumber numberWithFloat:10.0],
+                            [NSNumber numberWithFloat:5.0], nil];
+    
+    
+    NSArray *keys = [NSArray arrayWithObjects:@"name", @"hours", @"location", @"menu", @"traffic", @"walking", @"isOpen", @"future", nil];
+    
+    NSArray *baja = [NSArray arrayWithObjects:@"Baja Grill", @"8:00am - 11:00pm", @"Bingham Commons", @"theMenu", trafficBaja, @"14min", [NSNumber numberWithBool:YES], trafficBajaFuture, nil];
     
     
     
@@ -224,6 +281,7 @@
                       [NSArray arrayWithArray:traffic],
                       @"5min",
                       [NSNumber numberWithBool:YES],
+                      trafficFuture,
                       nil];
     
     NSArray *dobbs = [NSArray arrayWithObjects:
@@ -234,6 +292,7 @@
                       [NSArray arrayWithArray:trafficDobbs],
                       @"10min",
                       [NSNumber numberWithBool:NO],
+                      trafficDobbsFuture,
                       nil];
     
     
@@ -245,7 +304,20 @@
                       [NSArray arrayWithArray:trafficRollins],
                       @"4min",
                       [NSNumber numberWithBool:YES],
+                        trafficRollinsFuture,
                       nil];
+    
+    NSArray *mark = [NSArray arrayWithObjects:
+                        @"The Mark",
+                        @"7:00am - 6:00pm",
+                        @"The Mark , University of Missouri, Columbia, MO",
+                        [NSString stringWithFormat:@"This would be the menu"],
+                        [NSArray arrayWithArray:trafficMark],
+                        @"4min",
+                        [NSNumber numberWithBool:YES],
+                     trafficMarkFuture,
+                        nil];
+    
     
     [halls addObject:[NSDictionary dictionaryWithObjects:plaza forKeys:keys]];
     
@@ -254,6 +326,8 @@
     [halls addObject:[NSDictionary dictionaryWithObjects:dobbs forKeys:keys]];
     
     [halls addObject:[NSDictionary dictionaryWithObjects:rollins forKeys:keys]];
+    
+    [halls addObject:[NSDictionary dictionaryWithObjects:mark forKeys:keys]];
     
     
     return halls;
@@ -270,16 +344,30 @@
     
     NSDictionary *theDiningHall = [diningHalls objectAtIndex:theIndex];
     
-    PNLineChart *lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0.0, headerHeight, 320.0, cell.bounds.size.height - headerHeight )];
+    
+    CGRect chartFrame;
+    
+    chartFrame.origin = CGPointMake(0.0, headerHeight);
+    
+    chartFrame.size.height = cell.bounds.size.height - headerHeight;
+    chartFrame.size.width = 320.0 / 2;
+    
+    
+    
+    
+    
+    PNLineChart *lineChart = [[PNLineChart alloc] initWithFrame:chartFrame];
     
     [lineChart setXLabels:@[@"0", @"-30m", @"-1hr", @"-1.5hrs", @"-2hrs", @"-2.5hrs", @"-3hrs"]];
     
     // Line chart 1
     NSArray *data01Array = [theDiningHall objectForKey:@"traffic"];
     
+    NSNumber *lastCount = [data01Array lastObject];
+    
     PNLineChartData *data1 = [PNLineChartData new];
     
-    [data1 setColor:[UIColor denimColor]];
+    [data1 setColor:[UIColor blackColor]];
     data1.itemCount = lineChart.xLabels.count;
     data1.getData = ^(NSUInteger index) {
         CGFloat yValue = [[data01Array objectAtIndex:index] floatValue];
@@ -298,9 +386,92 @@
 
 //        [lineChart setAlpha:0.2];
     
-    [lineChart setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"graphy.png"]]];
+//    [lineChart setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"graphy.png"]]];
 
+    [lineChart setBackgroundColor:[UIColor goldenrodColor]];
+    
     [lineChart strokeChart];
+    
+    chartFrame.origin.x += 160.0;
+    PNLineChart *futureChart = [[PNLineChart alloc] initWithFrame:chartFrame];
+    
+    [futureChart setXLabels:@[@"0", @"-30m", @"-1hr", @"-1.5hrs", @"-2hrs", @"-2.5hrs", @"-3hrs"]];
+    
+    // Line chart 1
+    NSArray *futureDataArray = [theDiningHall objectForKey:@"future"];
+    
+//    NSNumber *lastCount2 = [data01Array lastObject];
+    
+    PNLineChartData *futureData = [PNLineChartData new];
+    
+    UIColor *lineColor;
+    
+    if ([lastCount floatValue] == 0.0) {
+        lineColor = [self determineColorUsingCurrentPeople:[lastCount floatValue] andBackground:NO];
+    }
+    else
+    {
+        lineColor = [UIColor grayColor];
+    }
+    [futureData setColor:[UIColor grayColor]];
+    futureData.itemCount = futureChart.xLabels.count;
+    futureData.getData = ^(NSUInteger index) {
+        CGFloat yValue = [[futureDataArray objectAtIndex:index] floatValue];
+        return [PNLineChartDataItem dataItemWithY:yValue];
+    };
+    
+    futureChart.chartData = @[futureData];
+    [futureChart setYValueMin:0.0];
+    
+    [cell.contentView addSubview:futureChart];
+    [futureChart setShowLabel:NO];
+    [futureChart setYValueMax:100.0];
+    [futureChart setYValueMin:0.0];
+    [futureChart setBackgroundColor:[UIColor goldenrodColor]];
+
+    
+    [futureChart strokeChart];
+    float iconSize = headerHeight * 0.55;
+    
+    float iconYpos = (headerHeight / 2.0) - (iconSize / 2.0);
+    
+    CGSize iconDoubleSize = CGSizeMake(iconSize, iconSize);
+
+    float specialIconSize = headerHeight * 0.3;
+    
+    FAKFontAwesome *target = [FAKFontAwesome angleDownIconWithSize:iconSize];
+    
+    [target addAttribute:NSForegroundColorAttributeName value:[UIColor charcoalColor]];
+    
+    CGRect targetFrame;
+    
+    targetFrame.origin.x = 160.0 - specialIconSize/2.0;
+    targetFrame.origin.y = 35.0;
+    
+    targetFrame.size = CGSizeMake(specialIconSize, specialIconSize);
+    
+    UIImageView *targetImage = [[UIImageView alloc] initWithFrame:targetFrame];
+    
+    [targetImage setImage:[target imageWithSize:CGSizeMake(specialIconSize, specialIconSize)]];
+    
+    [cell.contentView addSubview:targetImage];
+    
+    CGRect nowLabelFrame;
+    float nowLabelWidth = 30.0;
+    
+    nowLabelFrame.origin.x = 160.0 - nowLabelWidth / 2.0;
+    nowLabelFrame.origin.y = headerHeight - 2.0;
+    
+    nowLabelFrame.size = CGSizeMake(nowLabelWidth, 15.0);
+    
+    
+    UILabel *nowLabel = [[UILabel alloc] initWithFrame:nowLabelFrame];
+    [nowLabel setTextAlignment:NSTextAlignmentCenter];
+    [nowLabel setFont:[UIFont fontWithName:@"Avenir-Book" size:10.0]];
+    [nowLabel setTextColor:[UIColor blackColor]];
+    [nowLabel setText:@"Now"];
+    
+    [cell.contentView addSubview:nowLabel];
     
     
     //  Add title
@@ -358,11 +529,6 @@
     
     // Open
     
-    float iconSize = headerHeight * 0.55;
-    
-    float iconYpos = (headerHeight / 2.0) - (iconSize / 2.0);
-    
-    CGSize iconDoubleSize = CGSizeMake(iconSize, iconSize);
     
     FAKFoundationIcons *openIcon = [FAKFoundationIcons clockIconWithSize:iconSize];
     
@@ -505,9 +671,9 @@
     
     
     
-    NSDictionary *options = @{kCRToastTextKey : @"Swipes are low",
+    NSDictionary *options = @{kCRToastTextKey : @"Swipes Low",
                               kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
-                              kCRToastBackgroundColorKey : [UIColor warningColor],
+                              kCRToastBackgroundColorKey : [UIColor dangerColor],
                               kCRToastAnimationInTypeKey : @(CRToastAnimationTypeLinear),
                               kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeLinear),
                               kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionBottom),
@@ -517,13 +683,99 @@
                               kCRToastImageKey : [alertIcon imageWithSize:iconDoubleSize],
                               kCRToastTextAlignmentKey : @(NSTextAlignmentLeft),
                               kCRToastNotificationTypeKey : @(CRToastTypeNavigationBar),
-
-                              kCRToastSubtitleTextKey : @"6 remaing (est. 2 days left)"};
+                              kCRToastFontKey : [UIFont fontWithName:@"Avenir-Heavy" size:16.0],
+                              kCRToastSubtitleTextKey : @"6 remaing (est. 2 days left)",
+                              kCRToastSubtitleFontKey : [UIFont fontWithName:@"Avenir-Book" size:10.0]};
     
                               [CRToastManager showNotificationWithOptions:options
                                                           completionBlock:^{
                                                               NSLog(@"Completed");
                                                           }];
                               
+}
+-(UIColor*)determineColorUsingCurrentPeople:(float) current andBackground:(BOOL) returnBackground
+{
+    if (returnBackground) {
+        if (current == 0) {
+            return [UIColor black50PercentColor];
+        }
+        else if (current > 0 && current < 50.0)
+        {
+            return [UIColor Evernote];
+        }
+        else if (current >= 50.0 && current < 75.0)
+        {
+            return [UIColor Etsy];
+        }
+        else
+        {
+            return [UIColor CocaCola];
+        }
+    }
+    else{
+        if (current == 0) {
+            return [UIColor black25PercentColor];
+        }
+        else if (current > 0 && current < 50.0)
+        {
+            return [UIColor whiteColor];
+        }
+        else if (current >= 50.0 && current < 75.0)
+        {
+            return [UIColor whiteColor];
+        }
+        else
+        {
+            return [UIColor whiteColor];
+        }
+    }
+   
+}
+-(UIImage*)createCardView
+{
+    CGRect barButtonRect;
+    
+    barButtonRect.origin = CGPointMake(0.0, 0.0);
+    
+    barButtonRect.size = CGSizeMake(60.0, 30.0);
+    
+    
+    UIView *mainView = [[UIView alloc] initWithFrame:barButtonRect];
+//    [mainView setBackgroundColor:[UIColor yellowColor]];
+    float iconSize = 15.0;
+    
+    CGSize iconDoubleSize = CGSizeMake(iconSize, iconSize);
+    
+    FAKFoundationIcons *cardIcon = [FAKFoundationIcons creditCardIconWithSize:iconSize];
+    [cardIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    
+    UIImageView *cardImage = [[UIImageView alloc] initWithFrame:CGRectMake(25.0, 5.0, iconSize, iconSize)];
+    [cardImage setImage:[cardIcon imageWithSize:iconDoubleSize]];
+    
+    [mainView addSubview:cardImage];
+    
+    UILabel *cardCount = [[UILabel alloc] initWithFrame:CGRectMake(42.0, 6.0, 30.0, 30.0)];
+    
+    [cardCount setText:@"6"];
+    
+    [cardCount setTextColor:[UIColor whiteColor]];
+    
+    [cardCount setFont:[UIFont fontWithName:@"Avenir-Book" size:20.0]];
+    
+    [mainView addSubview:cardCount];
+    
+    UIGraphicsBeginImageContextWithOptions(mainView.bounds.size, NO, 0.0);
+    [    mainView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return img;
+
+    
+    
+    
+    
 }
 @end

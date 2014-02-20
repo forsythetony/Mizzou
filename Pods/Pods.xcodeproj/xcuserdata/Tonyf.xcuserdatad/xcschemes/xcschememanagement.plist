@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FPBrandColors.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FontAwesomeKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08680B900186456FA06F7E8E</key>
+		<key>75D4676A71C54C3A80DC7018</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20A846ABB03A4462ABBDDFBC</key>
+		<key>7F28861D97C94EC6AE0FAC8B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31C0BF25002A4A21BD3788F4</key>
+		<key>803623988AEA4F7CB12FF5DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C8B85C37518E49C3AB2FE09B</key>
+		<key>B58891B480E74C5BACAAC347</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CA105A9DFE1542F798054080</key>
+		<key>BA3C825601534627B3292187</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D6577B0175204146AE91241A</key>
+		<key>C6492C580DD048278A750773</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1FDC13B3C2148B880CD0137</key>
 		<dict>
 			<key>primary</key>
 			<true/>
