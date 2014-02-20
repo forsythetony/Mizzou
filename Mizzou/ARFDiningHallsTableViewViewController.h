@@ -18,7 +18,7 @@
 #import <BEMSimpleLineGraph/BEMSimpleLineGraphView.h>
 #import "ARFDiningHall.h"
 
-@interface ARFDiningHallsTableViewViewController : UITableViewController <BEMSimpleLineGraphDelegate>
+@interface ARFDiningHallsTableViewViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *panelViewButton;
 

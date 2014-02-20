@@ -255,6 +255,8 @@
                             [NSNumber numberWithFloat:5.0], nil];
     
     
+    UIColor *globalGraphColor = [UIColor hollyGreenColor];
+    
     ARFDiningHall *plaza = [ARFDiningHall new];
     
     [plaza setCurrentTraffic:traffic];
@@ -263,9 +265,62 @@
     [plaza setHours:@"8:00am - 5:00pm"];
     [plaza setAddress:@"Plaza, University of Missouri, Columbia, Missouri"];
     [plaza setWalkingDistance:@"5mi"];
+    [plaza setGraphColor:globalGraphColor];
+    
+    
+    ARFDiningHall *baja = [ARFDiningHall new];
+    
+    [baja setCurrentTraffic:trafficBaja];
+    [baja setName:@"Baja Grill"];
+    [baja setIsOpen:YES];
+    [baja setHours:@"8:00am - 5:00pm"];
+    [baja setAddress:@"Bigham Commons, University of Missouri, St. Louis"];
+    [baja setWalkingDistance:@"3mi"];
+    [baja setGraphColor:globalGraphColor];
+    
+    
+    ARFDiningHall *dobbs = [ARFDiningHall new];
+    
+    [dobbs setCurrentTraffic:trafficDobbs];
+    [dobbs setName:@"Dobbs Pavilion"];
+    [dobbs setIsOpen:NO];
+    [dobbs setHours:@"9:00am - 2:00pm"];
+    [dobbs setAddress:@"Some Address"];
+    [dobbs setWalkingDistance:@"10min"];
+    [dobbs setGraphColor:globalGraphColor];
+    
+    ARFDiningHall *rollins = [ARFDiningHall new];
+    
+    [rollins setCurrentTraffic:trafficRollins];
+    [rollins setName:@"Rollins"];
+    [rollins setIsOpen:YES];
+    [rollins setHours:@"4am - 9pm"];
+    [rollins setWalkingDistance:@"4min"];
+    [rollins setGraphColor:globalGraphColor];
+    
+    
+    ARFDiningHall *mark = [ARFDiningHall new];
+    
+    [mark setCurrentTraffic:trafficMark];
+    [mark setName:@"The Mark"];
+    [mark setIsOpen:YES];
+    [mark setHours:@"11am - 9pm"];
+    [mark setWalkingDistance:@"15min"];
+    [mark setGraphColor:globalGraphColor];
+    
+    
+    
+    
+    
+    
+    
     
     
     [halls addObject:plaza];
+    [halls addObject:baja];
+    [halls addObject:dobbs];
+    [halls addObject:mark];
+    [halls addObject:rollins];
     
     return halls;
     

@@ -21,6 +21,9 @@
 @property (nonatomic, weak) NSArray *currentTraffic;
 @property (nonatomic, weak) NSArray *futureTraffic;
 
+@property (nonatomic, weak) UIColor *graphColor;
+
+
 @property (nonatomic, assign) BOOL  isOpen;
 
 @end
