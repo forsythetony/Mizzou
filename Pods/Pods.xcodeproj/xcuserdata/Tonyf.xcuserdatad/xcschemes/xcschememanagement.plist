@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-BEMSimpleLineGraph.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-CRToast.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>75D4676A71C54C3A80DC7018</key>
+		<key>09EE8266DC094E41A43D7E4F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F28861D97C94EC6AE0FAC8B</key>
+		<key>23CCF0FA39614E5AA9BC858F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>803623988AEA4F7CB12FF5DA</key>
+		<key>4F0AFA178E2B41EEB4C16B5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B58891B480E74C5BACAAC347</key>
+		<key>5EF22B46A0964BED831BA51B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BA3C825601534627B3292187</key>
+		<key>C1637CA20EC842A989FCBE9B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6492C580DD048278A750773</key>
+		<key>CCD0FB897DBB4E5FA5C00A4D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E1FDC13B3C2148B880CD0137</key>
+		<key>D1E2435084AF4D49925ECE90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E8A619900BFB4551BFA25DC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
