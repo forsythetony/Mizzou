@@ -318,7 +318,7 @@
     
     [targetImage setImage:[target imageWithSize:CGSizeMake(specialIconSize, specialIconSize)]];
     
-    [cell.contentView addSubview:targetImage];
+    //[cell.contentView addSubview:targetImage];
     
     CGRect nowLabelFrame;
     float nowLabelWidth = 30.0;
