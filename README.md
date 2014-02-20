@@ -14,7 +14,7 @@ A Dining Hall Application
   *   open/closed status
   *   Estimated number of people at the dining hall
   *   Estimated walking time from your location to the dining hall
-*   Number of swipes remaining in upper right corner
+*   Number of swipes remaining in upper right
 *   Warning message telling the user that he/she is low on swipes
 
 ###   About this version
