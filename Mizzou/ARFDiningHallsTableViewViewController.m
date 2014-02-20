@@ -335,7 +335,7 @@
     [nowLabel setTextColor:[UIColor blackColor]];
     [nowLabel setText:@"Now"];
     
-    [cell.contentView addSubview:nowLabel];
+    //[cell.contentView addSubview:nowLabel];
     
     
     //  Add title
@@ -657,7 +657,7 @@
     theGraph.colorBottom = [UIColor denimColor];
     
     theGraph.colorLine = [UIColor whiteColor];
-    theGraph.animationGraphEntranceSpeed = 2.0;
+    theGraph.animationGraphEntranceSpeed = 0.4;
     
     theGraph.delegate = theData;
     
@@ -665,15 +665,5 @@
     
     return theView;
 }
-//-(int)numberOfPointsInGraph
-//{
-//    return [[diningHalls objectAtIndex:0] count];
-//}
-//-(float)valueForIndex:(NSInteger)index
-//{
-//    NSArray *ar = [diningHalls objectAtIndex:0];
-//    
-//    return [[ar objectAtIndex:index] floatValue];
-//}
 
 @end
