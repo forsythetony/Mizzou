@@ -31,6 +31,7 @@
 		BAAEF55818B56390006F5785 /* squaredMetal.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55718B56390006F5785 /* squaredMetal.png */; };
 		BAAEF55D18B5781C006F5785 /* graphy.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55B18B5781C006F5785 /* graphy.png */; };
 		BAAEF55E18B5781C006F5785 /* graphy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55C18B5781C006F5785 /* graphy@2x.png */; };
+		BAAEF56018B585A8006F5785 /* mizzouDining.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55F18B585A8006F5785 /* mizzouDining.jpg */; };
 		E4F16F71E0D34A68A9C8F48A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF918B0C3FFC4F87B22E0F7C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		BAAEF55718B56390006F5785 /* squaredMetal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = squaredMetal.png; path = Images/squaredMetal.png; sourceTree = "<group>"; };
 		BAAEF55B18B5781C006F5785 /* graphy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = graphy.png; path = Images/graphy.png; sourceTree = "<group>"; };
 		BAAEF55C18B5781C006F5785 /* graphy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graphy@2x.png"; path = "Images/graphy@2x.png"; sourceTree = "<group>"; };
+		BAAEF55F18B585A8006F5785 /* mizzouDining.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mizzouDining.jpg; path = Images/mizzouDining.jpg; sourceTree = "<group>"; };
 		FF918B0C3FFC4F87B22E0F7C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -234,6 +236,7 @@
 		BAAEF55418B5592F006F5785 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				BAAEF55F18B585A8006F5785 /* mizzouDining.jpg */,
 				BAAEF55B18B5781C006F5785 /* graphy.png */,
 				BAAEF55C18B5781C006F5785 /* graphy@2x.png */,
 				BAAEF55718B56390006F5785 /* squaredMetal.png */,
@@ -330,6 +333,7 @@
 				BAAEF55618B55938006F5785 /* foodHeader.png in Resources */,
 				BAAEF55E18B5781C006F5785 /* graphy@2x.png in Resources */,
 				BAAEF55D18B5781C006F5785 /* graphy.png in Resources */,
+				BAAEF56018B585A8006F5785 /* mizzouDining.jpg in Resources */,
 				49E81BFE189B700500E909C4 /* gray_jean_@2X.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

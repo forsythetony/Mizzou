@@ -13,6 +13,7 @@
 #import <PNChart.h>
 #import <Colours/Colours.h>
 #import <PNChart/UICountingLabel.h>
+#import <CRToast/CRToast.h>
 
 @interface ARFDiningHallsTableViewViewController : UITableViewController
 

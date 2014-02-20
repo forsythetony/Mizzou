@@ -16,6 +16,7 @@
     self.colorScheme = [[UIColor strawberryColor] colorSchemeOfType:ColorSchemeAnalagous];
     [self configureNavigationBar];
     
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     return YES;
 }

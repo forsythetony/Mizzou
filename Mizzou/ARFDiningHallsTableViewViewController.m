@@ -29,9 +29,10 @@
 {
     [super viewDidLoad];
     [self slidingPanelSetup];
+
+    [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(showTestNotifiction) userInfo:nil repeats:NO];
     
-    
-    [self.tableView addParallaxWithImage:[UIImage imageNamed:@"foodHeader.png"] andHeight:140.0];
+    [self.tableView addParallaxWithImage:[UIImage imageNamed:@"mizzouDining.jpg"] andHeight:140.0];
     
     
     diningHalls = [self dataSetup];
@@ -323,7 +324,7 @@
     }
     
     
-    
+    theBackgroundColor = [UIColor charcoalColor];
     
     
     [title setText:titleText];
@@ -488,5 +489,41 @@
     return cell;
     
     
+}
+-(void)showTestNotifiction
+{
+    
+    
+    
+    float iconSize = 30.0;
+    CGSize iconDoubleSize = CGSizeMake(iconSize, iconSize);
+    
+    FAKFoundationIcons *alertIcon = [FAKFoundationIcons alertIconWithSize:iconSize];
+    [alertIcon addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]];
+    
+    
+    
+    
+    
+    NSDictionary *options = @{kCRToastTextKey : @"Swipes are low",
+                              kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                              kCRToastBackgroundColorKey : [UIColor warningColor],
+                              kCRToastAnimationInTypeKey : @(CRToastAnimationTypeLinear),
+                              kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeLinear),
+                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionBottom),
+                              kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionBottom),
+                              kCRToastAnimationInTimeIntervalKey : @(0.7),
+                              kCRToastTimeIntervalKey : @(2.0),
+                              kCRToastImageKey : [alertIcon imageWithSize:iconDoubleSize],
+                              kCRToastTextAlignmentKey : @(NSTextAlignmentLeft),
+                              kCRToastNotificationTypeKey : @(CRToastTypeNavigationBar),
+
+                              kCRToastSubtitleTextKey : @"6 remaing (est. 2 days left)"};
+    
+                              [CRToastManager showNotificationWithOptions:options
+                                                          completionBlock:^{
+                                                              NSLog(@"Completed");
+                                                          }];
+                              
 }
 @end

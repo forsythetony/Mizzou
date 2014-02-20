@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-CRToast.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Colours.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>09A9EACC115A4A1D9E7C06BC</key>
+		<key>08680B900186456FA06F7E8E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29BE289929A846018A3426E7</key>
+		<key>20A846ABB03A4462ABBDDFBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5990C13E122742F5AD8B8A26</key>
+		<key>31C0BF25002A4A21BD3788F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D52A25DD6C645D0A0025CD2</key>
+		<key>C8B85C37518E49C3AB2FE09B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D3B5FC716FE4825B5A96DAA</key>
+		<key>CA105A9DFE1542F798054080</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6577B0175204146AE91241A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
