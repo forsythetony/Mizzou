@@ -64,15 +64,11 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
     return [diningHalls count];
 }
 
@@ -81,18 +77,8 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
-    
-    
-    NSDictionary *diningHall = [diningHalls objectAtIndex:indexPath.row];
-    
-//    cell.textLabel.text = [diningHall objectForKey:@"name"];
     
     cell = [self configureCell:cell withIndex:indexPath.row];
-    
-    
-    
-    
     
     return cell;
 }
@@ -303,9 +289,11 @@
     chartFrame.size.height = cell.bounds.size.height - headerHeight;
     chartFrame.size.width = 320.0 / 2;
     
+    UIView *lineChartContainer = [[UIView alloc] initWithFrame:chartFrame];
     
-    UIView *chartView = [self createChartsInView:chartView withData:theDiningHall];
+    lineChartContainer = [self createChartsInView:lineChartContainer withData:theDiningHall];
 
+    [cell.contentView addSubview:lineChartContainer];
     
     float iconSize = headerHeight * 0.55;
     
@@ -352,7 +340,7 @@
     
     //  Add title
     
-    NSString *titleText = [theDiningHall objectForKey:@"name"];
+    NSString *titleText = theDiningHall.name;
     
     UILabel *title = [[UILabel alloc ] initWithFrame:CGRectMake(12.0, 3.0, 400.0, 30.0)];
     
@@ -360,7 +348,8 @@
     
     UIColor *theTextColor;
     UIColor *theBackgroundColor;
-    if ([[theDiningHall objectForKey:@"isOpen"] boolValue]) {
+    
+    if (theDiningHall.isOpen) {
         theTextColor = [UIColor whiteColor];
         theBackgroundColor = [UIColor hollyGreenColor];
     }
@@ -476,7 +465,8 @@
     
     [iconsView addSubview:trafficLabel];
     
-    NSNumber *lastobj = [data01Array lastObject];
+    NSNumber *lastobj = [theDiningHall.currentTraffic lastObject];
+    
     
     [trafficLabel setFont:[UIFont fontWithName:@"Avenir-Heavy" size:10.0]];
     [trafficLabel setTextColor:theTextColor];
@@ -507,7 +497,7 @@
     [iconsView addSubview:mapImageView];
     
     
-    NSString *distLabelText = [theDiningHall objectForKey:@"walking"];
+    NSString *distLabelText = theDiningHall.walkingDistance;
     
     CGRect distLabelRect;
     
@@ -617,7 +607,7 @@
     
     
     UIView *mainView = [[UIView alloc] initWithFrame:barButtonRect];
-//    [mainView setBackgroundColor:[UIColor yellowColor]];
+
     float iconSize = 15.0;
     
     CGSize iconDoubleSize = CGSizeMake(iconSize, iconSize);
@@ -654,12 +644,20 @@
     CGRect graphFrame;
     
     graphFrame.origin.x = 0.0;
-    graphFrame.origin.y = TABLECELLHEADERHEIGHT;
+    graphFrame.origin.y = 0.0;
     
     graphFrame.size.width = 320.0;
     graphFrame.size.height = 86.0 - TABLECELLHEADERHEIGHT;
     
     BEMSimpleLineGraphView *theGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:graphFrame];
+    
+    theGraph.colorTop = [UIColor denimColor];
+    theGraph.alphaTop = 0.3;
+    
+    theGraph.colorBottom = [UIColor denimColor];
+    
+    theGraph.colorLine = [UIColor whiteColor];
+    theGraph.animationGraphEntranceSpeed = 2.0;
     
     theGraph.delegate = theData;
     
@@ -667,8 +665,15 @@
     
     return theView;
 }
--(int)numberOfPointsInGraph
-{
-    
-}
+//-(int)numberOfPointsInGraph
+//{
+//    return [[diningHalls objectAtIndex:0] count];
+//}
+//-(float)valueForIndex:(NSInteger)index
+//{
+//    NSArray *ar = [diningHalls objectAtIndex:0];
+//    
+//    return [[ar objectAtIndex:index] floatValue];
+//}
+
 @end
