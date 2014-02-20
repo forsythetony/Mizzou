@@ -1,4 +1,4 @@
 A Dining Hall Application
 ======
 
-[Home Screen](http://i.imgur.com/MJFZLtH.png)
+![Home Screen](http://i.imgur.com/MJFZLtH.png)
