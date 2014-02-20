@@ -15,7 +15,7 @@ A Dining Hall Application
   *   Estimated number of people at the dining hall
   *   Estimated walking time from your location to the dining hall
 *   Number of swipes remaining in upper right corner
-*   Warning message telling the user that he/she is low on swipes. 
+*   Warning message telling the user that he/she is low on swipes
 
 ###   About this version
 
@@ -23,7 +23,7 @@ This was thrown together over the course of an afternoon/evening. It is not hook
 
 ###   Why?
 
-Because we want to I guess and we posess the skill sets to actually make it happen. The current app also feels a bit abandoned. We're just students that want to create something for students. 
+I guess because we wanted to and now we have the skill sets to actually make it happen. The current app also feels a bit abandoned. We're just students that want to create something for students. 
 
 ### Future plans
 
