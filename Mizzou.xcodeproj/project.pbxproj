@@ -32,6 +32,7 @@
 		BAAEF55D18B5781C006F5785 /* graphy.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55B18B5781C006F5785 /* graphy.png */; };
 		BAAEF55E18B5781C006F5785 /* graphy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55C18B5781C006F5785 /* graphy@2x.png */; };
 		BAAEF56018B585A8006F5785 /* mizzouDining.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55F18B585A8006F5785 /* mizzouDining.jpg */; };
+		BAAEF56318B65CDE006F5785 /* ARFDiningHall.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAEF56218B65CDE006F5785 /* ARFDiningHall.m */; };
 		E4F16F71E0D34A68A9C8F48A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF918B0C3FFC4F87B22E0F7C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,8 @@
 		BAAEF55B18B5781C006F5785 /* graphy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = graphy.png; path = Images/graphy.png; sourceTree = "<group>"; };
 		BAAEF55C18B5781C006F5785 /* graphy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graphy@2x.png"; path = "Images/graphy@2x.png"; sourceTree = "<group>"; };
 		BAAEF55F18B585A8006F5785 /* mizzouDining.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mizzouDining.jpg; path = Images/mizzouDining.jpg; sourceTree = "<group>"; };
+		BAAEF56118B65CDE006F5785 /* ARFDiningHall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFDiningHall.h; sourceTree = "<group>"; };
+		BAAEF56218B65CDE006F5785 /* ARFDiningHall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFDiningHall.m; sourceTree = "<group>"; };
 		FF918B0C3FFC4F87B22E0F7C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -229,6 +232,8 @@
 				BAAEF55418B5592F006F5785 /* Images */,
 				BAAEF55018B54E35006F5785 /* ARFDiningHallsTableViewViewController.h */,
 				BAAEF55118B54E35006F5785 /* ARFDiningHallsTableViewViewController.m */,
+				BAAEF56118B65CDE006F5785 /* ARFDiningHall.h */,
+				BAAEF56218B65CDE006F5785 /* ARFDiningHall.m */,
 			);
 			name = DiningHalls;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 				BA9FC49A189B2228000CDE16 /* main.m in Sources */,
 				BA9FC4C8189B23C1000CDE16 /* HomeViewController.m in Sources */,
 				BA9FC4C5189B22B7000CDE16 /* SWRevealViewController.m in Sources */,
+				BAAEF56318B65CDE006F5785 /* ARFDiningHall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

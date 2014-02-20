@@ -8,6 +8,8 @@
 
 #import "ARFDiningHallsTableViewViewController.h"
 
+#define TABLECELLHEADERHEIGHT 25.0
+
 @interface ARFDiningHallsTableViewViewController () {
     NSMutableArray *diningHalls;
 }
@@ -267,68 +269,17 @@
                             [NSNumber numberWithFloat:5.0], nil];
     
     
-    NSArray *keys = [NSArray arrayWithObjects:@"name", @"hours", @"location", @"menu", @"traffic", @"walking", @"isOpen", @"future", nil];
+    ARFDiningHall *plaza = [ARFDiningHall new];
     
-    NSArray *baja = [NSArray arrayWithObjects:@"Baja Grill", @"8:00am - 11:00pm", @"Bingham Commons", @"theMenu", trafficBaja, @"14min", [NSNumber numberWithBool:YES], trafficBajaFuture, nil];
-    
-    
-    
-    NSArray *plaza = [NSArray arrayWithObjects:
-                      @"Plaza 900",
-                      @"7:00am - 6:00pm",
-                      @"900 Virginia Avenue, University of Missouri, Columbia, MO",
-                      [NSString stringWithFormat:@"This would be the menu"],
-                      [NSArray arrayWithArray:traffic],
-                      @"5min",
-                      [NSNumber numberWithBool:YES],
-                      trafficFuture,
-                      nil];
-    
-    NSArray *dobbs = [NSArray arrayWithObjects:
-                      @"Pavilion at Dobbs",
-                      @"7:00am - 6:00pm",
-                      @"Dobbs Pavilion, University of Missouri, Columbia, MO",
-                      [NSString stringWithFormat:@"This would be the menu"],
-                      [NSArray arrayWithArray:trafficDobbs],
-                      @"10min",
-                      [NSNumber numberWithBool:NO],
-                      trafficDobbsFuture,
-                      nil];
+    [plaza setCurrentTraffic:traffic];
+    [plaza setName:@"Plaza 900"];
+    [plaza setIsOpen:YES];
+    [plaza setHours:@"8:00am - 5:00pm"];
+    [plaza setAddress:@"Plaza, University of Missouri, Columbia, Missouri"];
+    [plaza setWalkingDistance:@"5mi"];
     
     
-    NSArray *rollins = [NSArray arrayWithObjects:
-                      @"Rollins",
-                      @"7:00am - 6:00pm",
-                      @"Rollins , University of Missouri, Columbia, MO",
-                      [NSString stringWithFormat:@"This would be the menu"],
-                      [NSArray arrayWithArray:trafficRollins],
-                      @"4min",
-                      [NSNumber numberWithBool:YES],
-                        trafficRollinsFuture,
-                      nil];
-    
-    NSArray *mark = [NSArray arrayWithObjects:
-                        @"The Mark",
-                        @"7:00am - 6:00pm",
-                        @"The Mark , University of Missouri, Columbia, MO",
-                        [NSString stringWithFormat:@"This would be the menu"],
-                        [NSArray arrayWithArray:trafficMark],
-                        @"4min",
-                        [NSNumber numberWithBool:YES],
-                     trafficMarkFuture,
-                        nil];
-    
-    
-    [halls addObject:[NSDictionary dictionaryWithObjects:plaza forKeys:keys]];
-    
-    [halls addObject:[NSDictionary dictionaryWithObjects:baja forKeys:keys]];
-    
-    [halls addObject:[NSDictionary dictionaryWithObjects:dobbs forKeys:keys]];
-    
-    [halls addObject:[NSDictionary dictionaryWithObjects:rollins forKeys:keys]];
-    
-    [halls addObject:[NSDictionary dictionaryWithObjects:mark forKeys:keys]];
-    
+    [halls addObject:plaza];
     
     return halls;
     
@@ -338,11 +289,11 @@
 }
 -(UITableViewCell*)configureCell:(UITableViewCell*) cell withIndex:(NSUInteger) theIndex
 {
-    float headerHeight = 25.0;
+    float headerHeight = TABLECELLHEADERHEIGHT;
 
     //  Add chart to cell
     
-    NSDictionary *theDiningHall = [diningHalls objectAtIndex:theIndex];
+    ARFDiningHall *theDiningHall = [diningHalls objectAtIndex:theIndex];
     
     
     CGRect chartFrame;
@@ -353,84 +304,9 @@
     chartFrame.size.width = 320.0 / 2;
     
     
-    
-    
-    
-    PNLineChart *lineChart = [[PNLineChart alloc] initWithFrame:chartFrame];
-    
-    [lineChart setXLabels:@[@"0", @"-30m", @"-1hr", @"-1.5hrs", @"-2hrs", @"-2.5hrs", @"-3hrs"]];
-    
-    // Line chart 1
-    NSArray *data01Array = [theDiningHall objectForKey:@"traffic"];
-    
-    NSNumber *lastCount = [data01Array lastObject];
-    
-    PNLineChartData *data1 = [PNLineChartData new];
-    
-    [data1 setColor:[UIColor blackColor]];
-    data1.itemCount = lineChart.xLabels.count;
-    data1.getData = ^(NSUInteger index) {
-        CGFloat yValue = [[data01Array objectAtIndex:index] floatValue];
-        return [PNLineChartDataItem dataItemWithY:yValue];
-    };
-    
-    lineChart.chartData = @[data1];
-    [lineChart setYValueMin:0.0];
-    
-    [cell.contentView addSubview:lineChart];
-    [lineChart setShowLabel:NO];
-    [lineChart setYValueMax:100.0];
-    [lineChart setYValueMin:0.0];
-    
-//    [lineChart setBackgroundColor:[UIColor yellowColor]];
-
-//        [lineChart setAlpha:0.2];
-    
-//    [lineChart setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"graphy.png"]]];
-
-    [lineChart setBackgroundColor:[UIColor goldenrodColor]];
-    
-    [lineChart strokeChart];
-    
-    chartFrame.origin.x += 160.0;
-    PNLineChart *futureChart = [[PNLineChart alloc] initWithFrame:chartFrame];
-    
-    [futureChart setXLabels:@[@"0", @"-30m", @"-1hr", @"-1.5hrs", @"-2hrs", @"-2.5hrs", @"-3hrs"]];
-    
-    // Line chart 1
-    NSArray *futureDataArray = [theDiningHall objectForKey:@"future"];
-    
-//    NSNumber *lastCount2 = [data01Array lastObject];
-    
-    PNLineChartData *futureData = [PNLineChartData new];
-    
-    UIColor *lineColor;
-    
-    if ([lastCount floatValue] == 0.0) {
-        lineColor = [self determineColorUsingCurrentPeople:[lastCount floatValue] andBackground:NO];
-    }
-    else
-    {
-        lineColor = [UIColor grayColor];
-    }
-    [futureData setColor:[UIColor grayColor]];
-    futureData.itemCount = futureChart.xLabels.count;
-    futureData.getData = ^(NSUInteger index) {
-        CGFloat yValue = [[futureDataArray objectAtIndex:index] floatValue];
-        return [PNLineChartDataItem dataItemWithY:yValue];
-    };
-    
-    futureChart.chartData = @[futureData];
-    [futureChart setYValueMin:0.0];
-    
-    [cell.contentView addSubview:futureChart];
-    [futureChart setShowLabel:NO];
-    [futureChart setYValueMax:100.0];
-    [futureChart setYValueMin:0.0];
-    [futureChart setBackgroundColor:[UIColor goldenrodColor]];
+    UIView *chartView = [self createChartsInView:chartView withData:theDiningHall];
 
     
-    [futureChart strokeChart];
     float iconSize = headerHeight * 0.55;
     
     float iconYpos = (headerHeight / 2.0) - (iconSize / 2.0);
@@ -772,10 +648,27 @@
     UIGraphicsEndImageContext();
     
     return img;
-
+}
+-(UIView*)createChartsInView:(UIView*) theView withData:(ARFDiningHall*) theData
+{
+    CGRect graphFrame;
     
+    graphFrame.origin.x = 0.0;
+    graphFrame.origin.y = TABLECELLHEADERHEIGHT;
     
+    graphFrame.size.width = 320.0;
+    graphFrame.size.height = 86.0 - TABLECELLHEADERHEIGHT;
     
+    BEMSimpleLineGraphView *theGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:graphFrame];
+    
+    theGraph.delegate = theData;
+    
+    [theView addSubview:theGraph];
+    
+    return theView;
+}
+-(int)numberOfPointsInGraph
+{
     
 }
 @end
