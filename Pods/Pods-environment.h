@@ -12,12 +12,6 @@
 #define COCOAPODS_VERSION_MINOR_APParallaxHeader 1
 #define COCOAPODS_VERSION_PATCH_APParallaxHeader 3
 
-// BEMSimpleLineGraph
-#define COCOAPODS_POD_AVAILABLE_BEMSimpleLineGraph
-#define COCOAPODS_VERSION_MAJOR_BEMSimpleLineGraph 1
-#define COCOAPODS_VERSION_MINOR_BEMSimpleLineGraph 3
-#define COCOAPODS_VERSION_PATCH_BEMSimpleLineGraph 0
-
 // CRToast
 #define COCOAPODS_POD_AVAILABLE_CRToast
 #define COCOAPODS_VERSION_MAJOR_CRToast 0

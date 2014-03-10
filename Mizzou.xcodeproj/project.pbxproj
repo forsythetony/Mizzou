@@ -26,6 +26,10 @@
 		BA9FC4C8189B23C1000CDE16 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4C7189B23C1000CDE16 /* HomeViewController.m */; };
 		BA9FC4CB189B23E4000CDE16 /* PanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */; };
 		BA9FC4CE189B327A000CDE16 /* stardust.png in Resources */ = {isa = PBXBuildFile; fileRef = BA9FC4CD189B327A000CDE16 /* stardust.png */; };
+		BAAAB60118CDC83600BE1B94 /* BEMAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAAB5FA18CDC83600BE1B94 /* BEMAnimations.m */; };
+		BAAAB60218CDC83600BE1B94 /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAAB5FC18CDC83600BE1B94 /* BEMCircle.m */; };
+		BAAAB60318CDC83600BE1B94 /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAAB5FE18CDC83600BE1B94 /* BEMLine.m */; };
+		BAAAB60418CDC83600BE1B94 /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAAB60018CDC83600BE1B94 /* BEMSimpleLineGraphView.m */; };
 		BAAEF55218B54E35006F5785 /* ARFDiningHallsTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAAEF55118B54E35006F5785 /* ARFDiningHallsTableViewViewController.m */; };
 		BAAEF55618B55938006F5785 /* foodHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55518B55938006F5785 /* foodHeader.png */; };
 		BAAEF55818B56390006F5785 /* squaredMetal.png in Resources */ = {isa = PBXBuildFile; fileRef = BAAEF55718B56390006F5785 /* squaredMetal.png */; };
@@ -74,6 +78,14 @@
 		BA9FC4C9189B23E4000CDE16 /* PanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanelViewController.h; sourceTree = "<group>"; };
 		BA9FC4CA189B23E4000CDE16 /* PanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanelViewController.m; sourceTree = "<group>"; };
 		BA9FC4CD189B327A000CDE16 /* stardust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stardust.png; path = Images/panelView/stardust.png; sourceTree = "<group>"; };
+		BAAAB5F918CDC83600BE1B94 /* BEMAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnimations.h; sourceTree = "<group>"; };
+		BAAAB5FA18CDC83600BE1B94 /* BEMAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimations.m; sourceTree = "<group>"; };
+		BAAAB5FB18CDC83600BE1B94 /* BEMCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCircle.h; sourceTree = "<group>"; };
+		BAAAB5FC18CDC83600BE1B94 /* BEMCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCircle.m; sourceTree = "<group>"; };
+		BAAAB5FD18CDC83600BE1B94 /* BEMLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMLine.h; sourceTree = "<group>"; };
+		BAAAB5FE18CDC83600BE1B94 /* BEMLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMLine.m; sourceTree = "<group>"; };
+		BAAAB5FF18CDC83600BE1B94 /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
+		BAAAB60018CDC83600BE1B94 /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
 		BAAEF55018B54E35006F5785 /* ARFDiningHallsTableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARFDiningHallsTableViewViewController.h; sourceTree = "<group>"; };
 		BAAEF55118B54E35006F5785 /* ARFDiningHallsTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARFDiningHallsTableViewViewController.m; sourceTree = "<group>"; };
 		BAAEF55518B55938006F5785 /* foodHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = foodHeader.png; path = Images/foodHeader.png; sourceTree = "<group>"; };
@@ -133,6 +145,7 @@
 		BA9FC481189B2228000CDE16 = {
 			isa = PBXGroup;
 			children = (
+				BAAAB5F718CDC81E00BE1B94 /* Supporting Files */,
 				BA9FC493189B2228000CDE16 /* Mizzou */,
 				BA9FC4B2189B2228000CDE16 /* MizzouTests */,
 				BA9FC48C189B2228000CDE16 /* Frameworks */,
@@ -224,6 +237,29 @@
 				BA9FC4CD189B327A000CDE16 /* stardust.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		BAAAB5F718CDC81E00BE1B94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAAAB5F818CDC83600BE1B94 /* Classes */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAAAB5F818CDC83600BE1B94 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BAAAB5F918CDC83600BE1B94 /* BEMAnimations.h */,
+				BAAAB5FA18CDC83600BE1B94 /* BEMAnimations.m */,
+				BAAAB5FB18CDC83600BE1B94 /* BEMCircle.h */,
+				BAAAB5FC18CDC83600BE1B94 /* BEMCircle.m */,
+				BAAAB5FD18CDC83600BE1B94 /* BEMLine.h */,
+				BAAAB5FE18CDC83600BE1B94 /* BEMLine.m */,
+				BAAAB5FF18CDC83600BE1B94 /* BEMSimpleLineGraphView.h */,
+				BAAAB60018CDC83600BE1B94 /* BEMSimpleLineGraphView.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		BAAEF55318B55921006F5785 /* DiningHalls */ = {
@@ -391,13 +427,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAAB60418CDC83600BE1B94 /* BEMSimpleLineGraphView.m in Sources */,
+				BAAAB60318CDC83600BE1B94 /* BEMLine.m in Sources */,
 				BAAEF55218B54E35006F5785 /* ARFDiningHallsTableViewViewController.m in Sources */,
+				BAAAB60118CDC83600BE1B94 /* BEMAnimations.m in Sources */,
 				BA9FC49E189B2228000CDE16 /* ARFAppDelegate.m in Sources */,
 				BA9FC4CB189B23E4000CDE16 /* PanelViewController.m in Sources */,
 				BA9FC49A189B2228000CDE16 /* main.m in Sources */,
 				BA9FC4C8189B23C1000CDE16 /* HomeViewController.m in Sources */,
 				BA9FC4C5189B22B7000CDE16 /* SWRevealViewController.m in Sources */,
 				BAAEF56318B65CDE006F5785 /* ARFDiningHall.m in Sources */,
+				BAAAB60218CDC83600BE1B94 /* BEMCircle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

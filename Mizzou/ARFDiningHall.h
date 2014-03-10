@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <BEMSimpleLineGraphView.h>
+#import "BEMSimpleLineGraphView.h"
 
 
 @interface ARFDiningHall : NSObject <BEMSimpleLineGraphDelegate>

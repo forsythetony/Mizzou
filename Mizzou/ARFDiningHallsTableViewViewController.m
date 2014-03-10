@@ -342,7 +342,7 @@
     chartFrame.origin = CGPointMake(0.0, headerHeight);
     
     chartFrame.size.height = cell.bounds.size.height - headerHeight;
-    chartFrame.size.width = 320.0 / 2;
+    chartFrame.size.width = 320.0;
     
     UIView *lineChartContainer = [[UIView alloc] initWithFrame:chartFrame];
     
@@ -707,10 +707,11 @@
     BEMSimpleLineGraphView *theGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:graphFrame];
     
     theGraph.colorTop = [UIColor denimColor];
-    theGraph.alphaTop = 1.0;
+    theGraph.alphaTop = 0.3;
     
     theGraph.colorBottom = [UIColor denimColor];
-    theGraph.alphaBottom = 0.2;
+    theGraph.alphaBottom = 1.0;
+    
     
     theGraph.colorLine = [UIColor whiteColor];
     theGraph.animationGraphEntranceSpeed = 0.4;
@@ -719,8 +720,121 @@
    // theGraph.transform = CGAffineTransformMakeScale(1, -1);
     
     [theView addSubview:theGraph];
-    
+    [self drawLabelsInView:theView];
     return theView;
 }
+-(NSInteger)numberOfGapsBetweenLabelsOnLineGraph:(BEMSimpleLineGraphView *)graph
+{
+    return 0;
+}
+-(NSString *)lineGraph:(BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index
+{
+    NSString *labelString = [NSString stringWithFormat:@"%d", index];
+    
+    return  labelString;
+}
+-(void)drawLabelsInView:(UIView*) theView
+{
+    CGRect sizeOfContainer = theView.frame;
+    
+    NSInteger numberOfLabels = 7;
+    
+    
+    float timeStartValue = 5;
+    
+    float widthOfContainer = sizeOfContainer.size.width;
+    float heightOfLabel = 15.0;
+    
+    float xOffset = 9.0;
+    
+    float incValue = widthOfContainer / numberOfLabels;
+    float xValue = 0.0;
+    float yValue = sizeOfContainer.size.height - heightOfLabel;
+    
+    UIFont *labelFont = [UIFont fontWithName:@"Avenir-Book" size:10.0];
+    
+    
+    for (int i = 0; i < numberOfLabels; i++) {
+        
+        float lineHeight;
+        
+        if (i % 2 == 0) {
+            lineHeight = -15.0;
+            UILabel *labelLabel = [[UILabel alloc] initWithFrame:CGRectMake(xValue, yValue + lineHeight, incValue, heightOfLabel)];
+            
+            labelLabel.text = [NSString stringWithFormat:@"%.0f", timeStartValue];
+            labelLabel.textColor = [UIColor black75PercentColor];
+            labelLabel.font = labelFont;
+            labelLabel.textAlignment = NSTextAlignmentCenter;
+            [theView addSubview:labelLabel];
 
+        }
+        else
+        {
+            lineHeight = -8.0;
+        }
+        
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake((xValue + (incValue / 2.0)), sizeOfContainer.size.height, 1.0, lineHeight)];
+        
+        [lineView setBackgroundColor:[UIColor black75PercentColor]];
+
+        [theView addSubview:lineView];
+        
+        
+        xValue += incValue;
+        timeStartValue += 0.5;
+        
+        
+        //Create line
+        
+    }
+    
+    CAShapeLayer *theLayer = [[CAShapeLayer alloc] init];
+    
+    float lineY = (sizeOfContainer.size.height / 2) - 10.0;
+     float widthOfCapacityLabel = 20.0;
+    float heightOfCapacityLabel = 15.0;
+    
+    
+    
+    float yCapLabelOffset = 2.0;
+    
+    
+    UILabel *capacityLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, lineY - (heightOfCapacityLabel / 2.0) + yCapLabelOffset, widthOfCapacityLabel, heightOfCapacityLabel)];
+    
+    capacityLabel.text = @"125";
+    capacityLabel.font = labelFont;
+    capacityLabel.textColor = [UIColor blackColor];
+    
+   // [theView addSubview:capacityLabel];
+    [capacityLabel sizeToFit];
+    CGPoint startPoint = CGPointMake(0.0, lineY);
+    CGPoint endPoint = CGPointMake(320.0, lineY);
+    [self createLineInView:theView withStartPoint:startPoint andEndPoint:endPoint andShapeLayer:theLayer];
+    
+    
+    [theView.layer addSublayer:theLayer];
+    
+
+}
+-(void)createLineInView:(UIView*) theView withStartPoint:(CGPoint) start andEndPoint:(CGPoint) end andShapeLayer:(CAShapeLayer*) shapelayer
+{
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    //draw a line
+    [path moveToPoint:start]; //add yourStartPoint here
+    [path addLineToPoint:end];// add yourEndPoint here
+    [path stroke];
+    
+    float dashPattern[] = {1,0}; //make your pattern here
+    [path setLineDash:dashPattern count:2 phase:3];
+    
+    UIColor *fill = [UIColor crimsonColor];
+    shapelayer.strokeStart = 0.0;
+    shapelayer.strokeColor = fill.CGColor;
+    shapelayer.lineWidth = 1.0;
+    shapelayer.lineJoin = kCALineJoinMiter;
+    shapelayer.lineDashPattern = [NSArray arrayWithObjects:[NSNumber numberWithInt:5],[NSNumber numberWithInt:4], nil];
+    shapelayer.lineDashPhase = 3.0f;
+    shapelayer.path = path.CGPath;
+}
 @end

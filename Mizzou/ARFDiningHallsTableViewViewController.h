@@ -15,10 +15,10 @@
 #import <PNChart/UICountingLabel.h>
 #import <CRToast/CRToast.h>
 #import <FPBrandColors/UIColor+FPBrandColor.h>
-#import <BEMSimpleLineGraph/BEMSimpleLineGraphView.h>
+#import "BEMSimpleLineGraphView.h"
 #import "ARFDiningHall.h"
 
-@interface ARFDiningHallsTableViewViewController : UITableViewController
+@interface ARFDiningHallsTableViewViewController : UITableViewController <BEMSimpleLineGraphDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *panelViewButton;
 
