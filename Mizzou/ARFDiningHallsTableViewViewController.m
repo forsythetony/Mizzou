@@ -707,14 +707,16 @@
     BEMSimpleLineGraphView *theGraph = [[BEMSimpleLineGraphView alloc] initWithFrame:graphFrame];
     
     theGraph.colorTop = [UIColor denimColor];
-    theGraph.alphaTop = 0.3;
+    theGraph.alphaTop = 1.0;
     
     theGraph.colorBottom = [UIColor denimColor];
+    theGraph.alphaBottom = 0.2;
     
     theGraph.colorLine = [UIColor whiteColor];
     theGraph.animationGraphEntranceSpeed = 0.4;
     
     theGraph.delegate = theData;
+   // theGraph.transform = CGAffineTransformMakeScale(1, -1);
     
     [theView addSubview:theGraph];
     
