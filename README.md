@@ -4,7 +4,7 @@ A Dining Hall Application
 ![Home Screen](http://i.imgur.com/MJFZLtH.png)
 ![Imgur](http://i.imgur.com/DcTValj.png)
 
-######   Animation is low quality and not exactly what you'd see in the app
+######   Animation is low quality and not exactly what you'd see in the app. Sidebar has also not been styled, except for setting the font to Papyrus because it's beautiful. 
 ![mizzouapp](https://f.cloud.github.com/assets/5825210/2214889/386d3af2-99e0-11e3-90ff-600da517db9a.gif)
 
 ##   About
